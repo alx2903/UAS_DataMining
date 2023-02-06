@@ -57,7 +57,7 @@ testing$prediction <- predict(logitmod, newdata = testing)
 
 accuracy <- sum(testing$diagnosis == y_pred_num)/length(testing$diagnosis)
 precision <- sum(testing$diagnosis == 1 & y_pred_num == 1)/(sum(y_pred_num == 1))
-recall <- sum(testing$diagnosis == 1 & y_pred_num == 1)/(sum(training == 1))
+recall <- sum(testing$diagnosis == 1 & y_pred_num == 1)/(sum(testing == 1))
 
 accuracy
 precision
